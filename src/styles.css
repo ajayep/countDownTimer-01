@@ -1,39 +1,75 @@
-.countdown-timer {
+.timer {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+.timer .rotate {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+  z-index: 10;
+}
+.timer .rotate #loader {
+  fill: #ff6d69;
+}
+.timer .dots {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  width: 52px;
-  height: 52px;
+  z-index: 15;
+  top: 0;
+  left: 0;
 }
-
-.countdown-timer__circle circle {
-  stroke-dasharray: 151px;
-  stroke-dashoffset: 151px;
-  stroke-linecap: butt;
-  stroke-width: 4px;
-  stroke: #fd4f57;
-  fill: none;
-}
-
-.countdown-timer__circle svg {
-  width: 52px;
-  height: 52px;
-  transform: rotateZ(-90deg);
-}
-
-.countdown-timer__text {
+.timer .dots .time {
+  height: 100%;
+  width: 6%;
+  display: block;
+  background-image: -moz-linear-gradient(
+    #ffc8c6,
+    #ffc8c6 16%,
+    rgba(0, 0, 0, 0) 16%,
+    rgba(0, 0, 0, 0) 84%,
+    #ffc8c6 84%,
+    #ffc8c6
+  );
+  background-image: -webkit-linear-gradient(
+    #ffc8c6,
+    #ffc8c6 16%,
+    rgba(0, 0, 0, 0) 16%,
+    rgba(0, 0, 0, 0) 84%,
+    #ffc8c6 84%,
+    #ffc8c6
+  );
+  background-image: linear-gradient(
+    #ffc8c6,
+    #ffc8c6 16%,
+    rgba(0, 0, 0, 0) 16%,
+    rgba(0, 0, 0, 0) 84%,
+    #ffc8c6 84%,
+    #ffc8c6
+  );
+  margin-left: -3%;
+  left: 50%;
   position: absolute;
-  top: 17px;
-  width: 52px;
-
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
 }
-
-@keyframes countdown-animation {
-  from {
-    stroke-dashoffset: 0px;
-  }
-  to {
-    stroke-dashoffset: 151px;
-  }
+.timer .dots .time.deg45 {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.timer .dots .time.deg90 {
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.timer .dots .time.deg135 {
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
 }
